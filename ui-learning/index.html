@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>UI-Learning</title>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" href="css/jquery-ui.css"/>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.js"></script>
+	<script>
+	  $(function(){
+	    var my_slider =
+		$("#slider").slider({
+		  min: 1,
+		  max:50,
+		  step:2,
+		  change: function(event, ui) {
+			$("#text").html(ui.value);	  
+		  }
+		});
+		
+	  $("#cancel").click(function(e) {
+	    e.preventDefault();
+		my_slider.slider('disable');
+	  });
+	  });
+	</script>
+  </head>
+  <body>
+    <div id="slider"></div>
+	<div id="text"></div>
+	<button id="cancel">Cancel Slider</button>
+  </body>
+</html>

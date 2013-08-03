@@ -1,0 +1,25 @@
+<html lang="en">
+  <head>
+    <title>UI-Learning</title>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" href="css/jquery-ui.css"/>
+	<link rel="stylesheet" href="css/style.css"/>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.js"></script>
+	<script>
+	  $(function(){
+	    var options = {
+		  revert: "invalid",
+		  revertDuration: 100
+		};
+	    $(".apple").draggable();
+		$(".orange").draggable();
+	  });
+	</script>
+  </head>
+  <body>
+    <div class="apple"></div>
+	<div class="apple"></div>
+	<div class="orange"></div>
+  </body>
+</html>
